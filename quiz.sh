@@ -1,12 +1,11 @@
 <<documentation
 Name: Niroop C Naik
 Date: Nov 2 2022
-Description:
-Sample input:
-Sample output:
+Description: Command Line Quiz
 documentation
 
 #!/bin/bash
+make --silent
 
 function signup()
 {

@@ -1,7 +1,7 @@
-quiz.sh: password.txt username.txt correctanswers.txt questions.txt
-password.txt:
+quiz.sh: passwords.txt usernames.txt correctanswers.txt questions.txt
+passwords.txt:
 	touch password.txt
-username.txt:
+usernames.txt:
 	touch username.txt
 correctanswers.txt:
 	var="a\nb\nd\na\nd\nb\nc\nc\nb\na\n" && echo -n $$var > correctanswers.txt
