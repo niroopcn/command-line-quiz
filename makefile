@@ -1,4 +1,4 @@
-project.sh: password.txt username.txt correctanswers.txt questions.txt
+quiz.sh: password.txt username.txt correctanswers.txt questions.txt
 password.txt:
 	touch password.txt
 username.txt:
