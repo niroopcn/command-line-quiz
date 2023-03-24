@@ -38,7 +38,7 @@ function signup()
     do
 	#read -sp "Enter password: " password; echo #'s' is for hidden text
 	echo -n "Enter Password: "
-	while IFS= read -r -s -n1 char
+	while read -r -s -n1 char
 	do
 	    if [[ $char == $'\0' ]]
 	    then
@@ -50,8 +50,8 @@ function signup()
 	echo
 	#read -sp "Re-enter password: " passwordverify; echo
 	echo -n "Re-enter password: "
-	while IFS= read -r -s -n1 char		#-s to hide contents, -n1 to read only 1 character
-	do
+	while read -r -s -n1 char		#-s to hide contents, -n1 to read only 1 character
+	do					#-r prevents backslashes from being interpreted as escape characters
 	    if [[ $char == $'\0' ]]	#if char is EOF or NULL
 	    then
 		break
@@ -110,7 +110,7 @@ function signin()
 	#read -sp "Enter Password: " typedpassword; echo
 	
 	echo -n "Enter Password: "
-	while read -s -n1 char
+	while read -r -s -n1 char
 	do
 	    if [[ $char == $'\0' ]]
 	    then
