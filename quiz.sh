@@ -36,9 +36,36 @@ function signup()
     newpassword=0
     while [ $newpassword -eq 0 ]
     do
-	read -sp "Enter password: " password; echo #'s' is for hidden text
-	read -sp "Re-enter password: " passwordverify; echo
-	if [ "$password" = "$passwordverify" ]
+	#read -sp "Enter password: " password; echo #'s' is for hidden text
+	echo -n "Enter Password: "
+	while read -s -n1 char
+	do
+	    if [[ $char == $'\0' ]]
+	    then
+		break
+	    fi
+	    echo -n "*"
+	    password+="$char"
+	done
+	echo
+	#read -sp "Re-enter password: " passwordverify; echo
+	echo -n "Re-enter password: "
+	while read -r -s -n1 char		#-s to hide contents, -n1 to read only 1 character
+	do
+	    if [[ $char == $'\0' ]]	#if char is EOF or NULL
+	    then
+		break
+	    fi
+	    echo -n "*"
+	    passwordverify+="$char"
+	done
+	echo
+
+	if [ ${#password} == 0 ]	#if length of password is 0, empty string
+	then
+	    echo "Please enter password"
+	    newpassword=0;
+	elif [ "$password" = "$passwordverify" ]
 	then
 	    echo "$typeduser" >> username.txt
 	    #./Hashing/a.out $password >> password.txt
@@ -80,8 +107,20 @@ function signin()
     while [ $getpassword -eq 1 ]
     do
 	pass=(`cat password.txt`)
-	read -sp "Enter Password: " typedpassword
+	#read -sp "Enter Password: " typedpassword; echo
+	
+	echo -n "Enter Password: "
+	while read -s -n1 char
+	do
+	    if [[ $char == $'\0' ]]
+	    then
+		break
+	    fi
+	    echo -n "*"
+	    typedpassword+="$char"
+	done
 	echo
+	
 	#temppass=`./Hashing/a.out $typedpassword`
 	temppass=`echo -n "$typedpassword" | sha256sum | cut -d ' ' -f1`
 	if [ "${pass[$position]}" = "$temppass" ]
