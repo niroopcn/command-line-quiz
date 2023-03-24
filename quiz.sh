@@ -38,7 +38,7 @@ function signup()
     do
 	#read -sp "Enter password: " password; echo #'s' is for hidden text
 	echo -n "Enter Password: "
-	while read -s -n1 char
+	while IFS= read -r -s -n1 char
 	do
 	    if [[ $char == $'\0' ]]
 	    then
@@ -50,7 +50,7 @@ function signup()
 	echo
 	#read -sp "Re-enter password: " passwordverify; echo
 	echo -n "Re-enter password: "
-	while read -r -s -n1 char		#-s to hide contents, -n1 to read only 1 character
+	while IFS= read -r -s -n1 char		#-s to hide contents, -n1 to read only 1 character
 	do
 	    if [[ $char == $'\0' ]]	#if char is EOF or NULL
 	    then
