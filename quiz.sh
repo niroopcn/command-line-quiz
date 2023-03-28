@@ -178,10 +178,14 @@ function testfunc()
 	    done
 	    if [ $i -eq 5 -a ${#opt} -eq 0 ]
 	    then
+		echo "TIME OUT"
 		echo e > useranswers.txt
+		sleep 1
 	    elif [ ${#opt} -eq 0 ]
 	    then
+		echo "TIME OUT"
 		echo e >> useranswers.txt
+		sleep 1
 	    fi 
 	done
 	clear
@@ -204,7 +208,7 @@ function compare()
 	    totalmarks=$(($totalmarks+1))
 	elif [ "${userans[$index]}" = "e" ]
 	then
-	    echo "TIMEOUT"
+	    echo "TIME OUT"
 	else
 	    echo "Wrong answer buddy, your answer is ${userans[$index]} but the correct answer is ${correctans[$index]}"
 	fi 
