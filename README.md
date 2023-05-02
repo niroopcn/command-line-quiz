@@ -14,7 +14,7 @@ The passwords generated in the sign-up process are stored securely using a crypt
 Hashing is a mathematical algorithm that converts plaintext to a unique text string or a ciphertext.
 A hash is not ‘encryption’ – it cannot be decrypted back to the original text (it is a ‘one-way’ cryptographic function).
 However, we can use this to validate the integrity of provided data by compare against pre-existing data available Which is why it is used in storing passwords.
-There are multiple types of hashes, in this project we use SHA-256 shave used the inbuilt linux command "sha256sum" to generate a SHA-256 hash.
+There are multiple types of hashes, in this project we implement SHA-256 by using inbuilt linux command "sha256sum" to generate a SHA-256 hash.
 SHA-256 generates a fixed-length hash of 32 bytes.
 
 Ex: Suppose the password is "hello", the generated data in hexadecimal format will look like this -> "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824".
