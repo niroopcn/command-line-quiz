@@ -1,6 +1,6 @@
 # command-line-quiz
 
-[Run Script](./quiz.sh){: onclick="window.open('https://terminalizer.com/'); setTimeout(() => {document.getElementById('terminalizer').terminal.run('bash ./quiz.sh');}, 1000);"}
+[Run Script](./terminalizer.js)
 
 Instructions:
 1) Run "bash quiz.sh"
