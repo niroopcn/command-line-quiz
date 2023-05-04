@@ -1,6 +1,6 @@
 # command-line-quiz
 
-<a href="javascript:void(0)" onclick="window.location.href='data:text/plain;base64,'+btoa(`#!/bin/bash\n./quiz.sh`)">Click to run script</a>
+[Run quiz.sh](https://replit.com/@niroopcn/CommandLineQuiz?run=quiz.sh){:target="_blank"}
 
 Instructions:
 1) Run "bash quiz.sh"
