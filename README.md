@@ -1,8 +1,8 @@
 # command-line-quiz
 
-[Run quiz.sh](https://replit.com/@niroopcn/CommandLineQuiz?run=./quiz.sh)
+[Click here to run quiz.sh online](https://replit.com/@niroopcn/CommandLineQuiz?run=./quiz.sh)
 
-Instructions:
+Instructions for local machine:
 1) Run "bash quiz.sh"
 2) If you face any errors, install "make" using "sudo apt install make" and run "make" command or re-run the bash script.
 3) After running make command or the bash script, you'll find 4 newly generated .txt files created.
