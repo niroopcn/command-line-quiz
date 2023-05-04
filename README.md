@@ -1,6 +1,6 @@
 # command-line-quiz
 
-[Run quiz.sh](https://replit.com/@niroopcn/CommandLineQuiz?run=quiz.sh){:target="_blank"}
+[Run quiz.sh](https://replit.com/@niroopcn/CommandLineQuiz?run=main.sh)
 
 Instructions:
 1) Run "bash quiz.sh"
