@@ -1,6 +1,6 @@
 # command-line-quiz
 
-[Run Quiz](./quiz.sh){: onclick="window.open('https://terminalizer.com/'); setTimeout(() => {document.getElementById('terminalizer').terminal.run('bash ./quiz.sh');}, 1000);" }
+<a href="javascript:void(0)" onclick="window.location.href='data:text/plain;base64,'+btoa(`#!/bin/bash\n./your_script.sh`)">Click to run script</a>
 
 Instructions:
 1) Run "bash quiz.sh"
