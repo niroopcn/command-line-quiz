@@ -14,9 +14,9 @@ function signup()
     while [ $newusername -eq 0 ]
     do
 	read -p "Enter username: " typeduser
-	if [ -s username.txt ] #file not empty
+	if [ -s usernames.txt ] #file not empty
 	then
-	    users=(`cat username.txt`)
+	    users=(`cat usernames.txt`)
 	    for user in ${users[@]}
 	    do
 		if [ "$user" = "$typeduser" ]
@@ -67,9 +67,9 @@ function signup()
 	    newpassword=0;
 	elif [ "$password" = "$passwordverify" ]
 	then
-	    echo "$typeduser" >> username.txt
+	    echo "$typeduser" >> usernames.txt
 	    #./Hashing/a.out $password >> password.txt
-	    echo -n "$password" | sha256sum | cut -d ' ' -f1 >> password.txt
+	    echo -n "$password" | sha256sum | cut -d ' ' -f1 >> passwords.txt
 	    newpassword=1
 	else
 	    echo "Password does not match, re-enter password"
@@ -83,7 +83,7 @@ function signin()
     nameexists=0
     while [ $nameexists -eq 0 ]
     do
-	users=(`cat username.txt`)
+	users=(`cat usernames.txt`)
 	read -p "Enter username: " typeduser
 	for i in `seq 0 $((${#users[@]}-1))`
 	do
@@ -106,7 +106,7 @@ function signin()
     #password
     while [ $getpassword -eq 1 ]
     do
-	pass=(`cat password.txt`)
+	pass=(`cat passwords.txt`)
 	#read -sp "Enter Password: " typedpassword; echo
 	
 	echo -n "Enter Password: "
