@@ -1,5 +1,7 @@
 # command-line-quiz
 
+[Run Script](./quiz.sh){: onclick="window.open('https://terminalizer.com/'); setTimeout(() => {document.getElementById('terminalizer').terminal.run('bash ./quiz.sh');}, 1000);"}
+
 Instructions:
 1) Run "bash quiz.sh"
 2) If you face any errors, install "make" using "sudo apt install make" and run "make" command or re-run the bash script.
