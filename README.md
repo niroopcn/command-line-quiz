@@ -1,6 +1,6 @@
 # command-line-quiz
 
-<a href="javascript:void(0)" onclick="window.location.href='data:text/plain;base64,'+btoa(`#!/bin/bash\n./your_script.sh`)">Click to run script</a>
+<a href="javascript:void(0)" onclick="window.location.href='data:text/plain;base64,'+btoa(`#!/bin/bash\n./quiz.sh`)">Click to run script</a>
 
 Instructions:
 1) Run "bash quiz.sh"
