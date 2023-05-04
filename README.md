@@ -1,6 +1,6 @@
 # command-line-quiz
 
-[Run quiz.sh](https://replit.com/@niroopcn/CommandLineQuiz?run=main.sh)
+[Run quiz.sh](https://replit.com/@niroopcn/CommandLineQuiz?run=./bash.sh)
 
 Instructions:
 1) Run "bash quiz.sh"
