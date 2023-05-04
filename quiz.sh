@@ -36,6 +36,8 @@ function signup()
     newpassword=0
     while [ $newpassword -eq 0 ]
     do
+	password=""
+	
 	#read -sp "Enter password: " password; echo #'s' is for hidden text
 	echo -n "Enter Password: "
 	while read -r -s -n1 char
@@ -49,6 +51,8 @@ function signup()
 	done
 	echo
 	#read -sp "Re-enter password: " passwordverify; echo
+	
+	passwordverify=""
 	echo -n "Re-enter password: "
 	while read -r -s -n1 char		#-s to hide contents, -n1 to read only 1 character
 	do					#-r prevents backslashes from being interpreted as escape characters
@@ -108,6 +112,8 @@ function signin()
     do
 	pass=(`cat passwords.txt`)
 	#read -sp "Enter Password: " typedpassword; echo
+
+	typedpassword=""
 	
 	echo -n "Enter Password: "
 	while read -r -s -n1 char
